@@ -1,0 +1,108 @@
+using System;
+using System.Windows.Forms;
+
+namespace DataGridViewExample
+{
+    public partial class DataGridViewForm : Form
+    {
+        public DataGridViewForm()
+        {
+            InitializeComponent();
+        }
+
+        // Insert values into the DataGridView at runtime
+        private void InsertButton_Click(object sender, EventArgs e)
+        {
+            // Define some values to insert into the DataGridView
+            string[] row1 = { "1", "John Doe", "30" };
+            string[] row2 = { "2", "Jane Smith", "28" };
+            string[] row3 = { "3", "Mark Johnson", "25" };
+
+            // Add rows to the DataGridView
+            dataGridView1.Rows.Add(row1);
+            dataGridView1.Rows.Add(row2);
+            dataGridView1.Rows.Add(row3);
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+using System;
+using System.Windows.Forms;
+
+namespace ScientificCalculator
+{
+    public partial class CalculatorForm : Form
+    {
+        public CalculatorForm()
+        {
+            InitializeComponent();
+        }
+
+        // When user clicks a number button, the value will be added to the input TextBox
+        private void Number_Click(object sender, EventArgs e)
+        {
+            Button btn = (Button)sender;
+            inputTextBox.Text += btn.Text;
+        }
+
+        // Clear the input TextBox
+        private void Clear_Click(object sender, EventArgs e)
+        {
+            inputTextBox.Clear();
+        }
+
+        // Calculate sine of input
+        private void Sine_Click(object sender, EventArgs e)
+        {
+            double value = Convert.ToDouble(inputTextBox.Text);
+            double result = Math.Sin(value);
+            resultTextBox.Text = result.ToString();
+        }
+
+        // Calculate cosine of input
+        private void Cosine_Click(object sender, EventArgs e)
+        {
+            double value = Convert.ToDouble(inputTextBox.Text);
+            double result = Math.Cos(value);
+            resultTextBox.Text = result.ToString();
+        }
+
+        // Calculate tangent of input
+        private void Tangent_Click(object sender, EventArgs e)
+        {
+            double value = Convert.ToDouble(inputTextBox.Text);
+            double result = Math.Tan(value);
+            resultTextBox.Text = result.ToString();
+        }
+
+        // Calculate logarithm of input
+        private void Log_Click(object sender, EventArgs e)
+        {
+            double value = Convert.ToDouble(inputTextBox.Text);
+            double result = Math.Log(value);
+            resultTextBox.Text = result.ToString();
+        }
+    }
+}
+
+
+
+
+
+
